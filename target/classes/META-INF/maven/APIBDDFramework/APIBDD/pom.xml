@@ -1,0 +1,43 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>APIBDDFramework</groupId>
+  <artifactId>APIBDD</artifactId>
+  <version>0.0.1-SNAPSHOT</version>
+  <dependencies>
+
+	<!-- https://mvnrepository.com/artifact/io.rest-assured/rest-assured -->
+	<dependency>
+	    <groupId>io.rest-assured</groupId>
+	    <artifactId>rest-assured</artifactId>
+	    <version>5.5.6</version>
+	    <scope>test</scope>
+	</dependency>
+	<!-- https://mvnrepository.com/artifact/io.cucumber/cucumber-java -->
+	<dependency>
+	    <groupId>io.cucumber</groupId>
+	    <artifactId>cucumber-java</artifactId>
+	    <version>7.30.0</version>
+	</dependency>
+	<!-- https://mvnrepository.com/artifact/io.cucumber/cucumber-junit -->
+	<dependency>
+	    <groupId>io.cucumber</groupId>
+	    <artifactId>cucumber-junit</artifactId>
+	    <version>7.30.0</version>
+	    <scope>test</scope>
+	</dependency>
+	<!-- https://mvnrepository.com/artifact/org.apache.groovy/groovy-all -->
+	<!-- This one is used because rest-assured and cucumber -junit have similar dependency files-->
+	<dependency>
+	    <groupId>org.apache.groovy</groupId>
+	    <artifactId>groovy-all</artifactId>
+	    <version>5.0.2</version>
+	    <type>pom</type>
+	</dependency>
+	<!-- https://mvnrepository.com/artifact/com.fasterxml.jackson.core/jackson-databind -->
+	<dependency>
+	    <groupId>com.fasterxml.jackson.core</groupId>
+	    <artifactId>jackson-databind</artifactId>
+	    <version>2.20.0</version>
+	</dependency>
+  </dependencies>
+</project>

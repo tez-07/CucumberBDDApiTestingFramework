@@ -1,0 +1,47 @@
+Request method:	POST
+Request URI:	https://rahulshettyacademy.com/maps/api/place/add/json?key=qaclick
+Proxy:			<none>
+Request params:	<none>
+Query params:	key=qaclick
+Form params:	<none>
+Path params:	<none>
+Headers:		Accept=*/*
+				Content-Type=application/json
+Cookies:		<none>
+Multiparts:		<none>
+Body:
+{
+    "accuracy": 60,
+    "name": "Frontline house",
+    "phone_number": "(+91) 983 893 3937",
+    "address": "29, side layout, cohen 09",
+    "website": "http://google.com",
+    "language": "French-IN",
+    "location": {
+        "lat": -38.383494,
+        "lng": 33.427362
+    },
+    "types": [
+        "shoe park",
+        "shoe"
+    ]
+}
+HTTP/1.1 200 OK
+Date: Wed, 22 Oct 2025 19:34:57 GMT
+Server: Apache/2.4.52 (Ubuntu)
+Access-Control-Allow-Origin: *
+Access-Control-Allow-Methods: POST
+Access-Control-Max-Age: 3600
+Access-Control-Allow-Headers: Content-Type, Access-Control-Allow-Headers, Authorization, X-Requested-With
+Content-Length: 194
+Keep-Alive: timeout=5, max=100
+Connection: Keep-Alive
+Content-Type: application/json;charset=UTF-8
+
+{
+    "status": "OK",
+    "place_id": "32c21b6f74a163e9b288240c712f2d61",
+    "scope": "APP",
+    "reference": "e0e493f9e0c07b5994fca5128f03ddb1e0e493f9e0c07b5994fca5128f03ddb1",
+    "id": "e0e493f9e0c07b5994fca5128f03ddb1"
+}
