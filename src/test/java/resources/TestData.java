@@ -8,12 +8,12 @@ import pojo.Location;
 
 public class TestData {
 
-	public pojo.AddPlace AddPlace() {
+	public pojo.AddPlace AddPlace(String name, String language, String address) {
 		AddPlace place = new AddPlace();
 		place.setAccuracy(60);
-		place.setAddress("29, side layout, cohen 09");
-		place.setLanguage("French-IN");
-		place.setName("Frontline house");
+		place.setAddress(address);
+		place.setLanguage(language);
+		place.setName(name);
 		place.setPhone_number("(+91) 983 893 3937");
 		place.setWebsite("http://google.com");
 		
