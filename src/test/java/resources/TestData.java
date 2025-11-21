@@ -29,4 +29,12 @@ public class TestData {
 		
 		return place;
 	}
+	
+	public String deletePayload(String place_id) {
+		
+		//needs to be converted to escape formatting
+		return "{\r\n    \"place_id\":\""+place_id+"\"\r\n}";
+	}
+	
+	
 }

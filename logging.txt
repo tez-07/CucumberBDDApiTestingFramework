@@ -1,8 +1,8 @@
 Request method:	POST
-Request URI:	https://rahulshettyacademy.com/maps/api/place/add/json?key=qaclick
+Request URI:	https://rahulshettyacademy.com/maps/api/place/add/json?key=qaclick123
 Proxy:			<none>
 Request params:	<none>
-Query params:	key=qaclick
+Query params:	key=qaclick123
 Form params:	<none>
 Path params:	<none>
 Headers:		Accept=*/*
@@ -12,11 +12,11 @@ Multiparts:		<none>
 Body:
 {
     "accuracy": 60,
-    "name": "PeterLand",
+    "name": "Conor McGregor",
     "phone_number": "(+91) 983 893 3937",
-    "address": "108 Peter St",
+    "address": "29, side layout, IO, Ireland",
     "website": "http://google.com",
-    "language": "English-EN",
+    "language": "Irish",
     "location": {
         "lat": -38.383494,
         "lng": 33.427362
@@ -27,7 +27,7 @@ Body:
     ]
 }
 HTTP/1.1 200 OK
-Date: Sun, 26 Oct 2025 21:50:52 GMT
+Date: Fri, 21 Nov 2025 18:38:52 GMT
 Server: Apache/2.4.52 (Ubuntu)
 Access-Control-Allow-Origin: *
 Access-Control-Allow-Methods: POST
@@ -40,8 +40,76 @@ Content-Type: application/json;charset=UTF-8
 
 {
     "status": "OK",
-    "place_id": "81085143e5a5957f85c6960f63c17a60",
+    "place_id": "385c2ccbe97f6aa98af815e2122bbc6a",
     "scope": "APP",
-    "reference": "5660d02da569b58c921219eba772ae775660d02da569b58c921219eba772ae77",
-    "id": "5660d02da569b58c921219eba772ae77"
+    "reference": "f24cbdaef7aba31073a86f3b845008edf24cbdaef7aba31073a86f3b845008ed",
+    "id": "f24cbdaef7aba31073a86f3b845008ed"
+}
+Request method:	GET
+Request URI:	https://rahulshettyacademy.com/maps/api/place/get/json?key=qaclick123&place_id=385c2ccbe97f6aa98af815e2122bbc6a
+Proxy:			<none>
+Request params:	<none>
+Query params:	key=qaclick123
+				place_id=385c2ccbe97f6aa98af815e2122bbc6a
+Form params:	<none>
+Path params:	<none>
+Headers:		Accept=*/*
+				Content-Type=application/json
+Cookies:		<none>
+Multiparts:		<none>
+Body:			<none>
+HTTP/1.1 200 OK
+Date: Fri, 21 Nov 2025 18:38:53 GMT
+Server: Apache/2.4.52 (Ubuntu)
+Access-Control-Allow-Origin: *
+Access-Control-Allow-Methods: POST
+Access-Control-Max-Age: 3600
+Access-Control-Allow-Headers: Content-Type, Access-Control-Allow-Headers, Authorization, X-Requested-With
+Content-Length: 255
+Keep-Alive: timeout=5, max=100
+Connection: Keep-Alive
+Content-Type: application/json;charset=UTF-8
+
+{
+    "location": {
+        "latitude": "-38.383494",
+        "longitude": "33.427362"
+    },
+    "accuracy": "60",
+    "name": "Conor McGregor",
+    "phone_number": "(+91) 983 893 3937",
+    "address": "29, side layout, IO, Ireland",
+    "types": "shoe park,shoe",
+    "website": "http://google.com",
+    "language": "Irish"
+}
+Request method:	POST
+Request URI:	https://rahulshettyacademy.com/maps/api/place/delete/json?key=qaclick123
+Proxy:			<none>
+Request params:	<none>
+Query params:	key=qaclick123
+Form params:	<none>
+Path params:	<none>
+Headers:		Accept=*/*
+				Content-Type=application/json
+Cookies:		<none>
+Multiparts:		<none>
+Body:
+{
+    "place_id": "385c2ccbe97f6aa98af815e2122bbc6a"
+}
+HTTP/1.1 200 OK
+Date: Fri, 21 Nov 2025 18:38:55 GMT
+Server: Apache/2.4.52 (Ubuntu)
+Access-Control-Allow-Origin: *
+Access-Control-Allow-Methods: POST
+Access-Control-Max-Age: 3600
+Access-Control-Allow-Headers: Content-Type, Access-Control-Allow-Headers, Authorization, X-Requested-With
+Content-Length: 15
+Keep-Alive: timeout=5, max=100
+Connection: Keep-Alive
+Content-Type: application/json;charset=UTF-8
+
+{
+    "status": "OK"
 }
