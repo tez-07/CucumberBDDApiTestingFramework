@@ -6,7 +6,7 @@ This repository contains the BDD API automation framework I built using **Java**
 📦 Project Setup
 ----------------
 
-### 🔹 1. Creating the Maven Project
+### 🔹  Creating the Maven Project
 
 I started by creating a **Maven project without any archetype** and added the core dependencies needed for API automation:
 
@@ -26,131 +26,137 @@ I started by creating a **Maven project without any archetype** and added the co
 <img width="385" height="451" alt="image" src="https://github.com/user-attachments/assets/df331371-d17d-4d1e-8891-f48ed4acee7d" />
 
 
-Key Components in My Framework
-✔ Features
+### Key Components in My Framework
 
-I placed all .feature files here, written in Gherkin syntax, describing the behavior of the APIs I wanted to test.
+#### ✔ Features
 
-✔ Cucumber Test Runner
+I placed all .feature files here, written in **Gherkin syntax**, describing the behavior of the APIs I wanted to test.
+
+#### ✔ Cucumber Test Runner
 
 This runner connects my:
 
-Feature files
+*   Feature files
+    
+*   Step definitions
+    
+*   Cucumber reporting
+    
+*   Tag-based filtering
+    
 
-Step definitions
-
-Cucumber reporting
-
-Tag-based filtering
-
-✔ Step Definitions
+#### ✔ Step Definitions
 
 These contain the actual implementation for each scenario step.
 
-✔ POJO Layer
+#### ✔ POJO Layer
 
 Located under src/main/java, these classes help me handle payloads more efficiently by supporting both serialization and deserialization.
 
 🧱 Framework Implementation Details
-🔹 Request & Response Utilities
+-----------------------------------
 
-I created a Utils file that defines all reusable components:
+### 🔹 Request & Response Utilities
 
-RequestSpecBuilder with base URI, content type, query params, etc.
+I created a **Utils** file that defines all reusable components:
 
-Logging for both request and response
-
-Reusable response specifications
+*   RequestSpecBuilder with base URI, content type, query params, etc.
+    
+*   Logging for both **request** and **response**
+    
+*   Reusable response specifications
+    
 
 This helped me maintain consistency and reduce repeated code across multiple test scenarios.
 
 🧬 Data-Driven Testing
+----------------------
 
 To drive dynamic input from the feature files, I used:
 
-Scenario Outline
-
-Examples tables
+*   **Scenario Outline**
+    
+*   **Examples tables**
+    
 
 This allows me to:
 
-Inject values from the feature file directly into the step definitions
-
-Update POJO fields dynamically before sending the payload
-
-Reuse the same test logic for multiple data sets
+*   Inject values from the feature file directly into the step definitions
+    
+*   Update POJO fields dynamically before sending the payload
+    
+*   Reuse the same test logic for multiple data sets
+    
 
 🧭 Enum for API Endpoints
+-------------------------
 
 I built an APIResources enum to manage all API endpoints in one centralized place.
-
-Example usage inside step definitions:
-
-APIResources.valueOf(resource).getResource();
-
 
 This makes the framework more maintainable and reduces the risk of hard-coded strings.
 
 🔖 Tagging Mechanism
+--------------------
 
 I used Cucumber tags (similar to TestNG grouping) to run specific sets of tests such as:
 
-@Smoke
-
-@Regression
-
-@AddPlace
-
-@DeletePlace
+*   @Smoke
+    
+*   @Regression
+    
+*   @AddPlace
+    
+*   @DeletePlace
+    
 
 Tag filters are controlled directly from my TestRunner file.
 
 🔁 Hooks (Before/After)
+-----------------------
 
 I implemented Cucumber hooks to handle setup and cleanup tasks.
 
-Example:
-For the deletePlace API to work, I first need a place ID.
-So in the @Before hook, I ensured addPlace is executed when needed.
+Example:For the deletePlace API to work, I first need a place ID.So in the **@Before hook**, I ensured addPlace is executed when needed.
 
 This helped in maintaining scenario dependencies without creating test flakiness.
 
 📝 Maven Execution
 ------------------
 
-Running the test cases is also possible with maven integration.
+I run the entire test suite using:
 
-The TestRunner + Feature files are executed through the Maven build lifecycle.
+The TestRunner triggers all feature files and integrates reports into the Maven lifecycle.
 
 📊 Reporting
+------------
 
 I configured the framework to generate:
 
-Cucumber HTML reports (https://github.com/damianszczepanik/maven-cucumber-reporting)
-
-Logs for debugging
+*   Cucumber HTML reports (https://github.com/damianszczepanik/maven-cucumber-reporting)
+    
+*   Logs for debugging
+    
 
 This gives me a clear picture of which tests passed/failed and why.
-
 
 📂 Test Data Management
 -----------------------
 
 I store:
 
-JSON body templates
-
-Sample payload files for AddPlaceAPI and others
+*   JSON body templates
+    
+*   Sample payload files for AddPlaceAPI and others
+    
 
 I use:
 
-Setter methods to update data dynamically
-
-Getter methods in POJOs to access them cleanly
+*   **Setter methods** to update data dynamically
+    
+*   **Getter methods** in POJOs to access them cleanly
+    
 
 This approach keeps my payloads reusable and readable.
 
-✨ Credits
----------
-Rahul Shetty
-https://www.linkedin.com/in/rahul-shetty-venkatesh/
+
+Thanks to : Rahul Shetty (https://rahulshettyacademy.com/)
