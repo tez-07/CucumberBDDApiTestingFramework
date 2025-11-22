@@ -154,7 +154,42 @@ I use:
 *   **Setter methods** to update data dynamically
     
 *   **Getter methods** in POJOs to access them cleanly
+
+📂 Jenkins
+-----------------------
+
+###  Configure Git & Maven Globally
+
+*   **Git:** Manage Jenkins → Global Tool Configuration → Git → add installation.
     
+*   **Maven:** Manage Jenkins → Global Tool Configuration → Maven → add installation.
+    
+
+###  Add GitHub Credentials
+
+*   Manage Jenkins → Credentials → System → Global → Add Credentials
+    
+*   Use **Username + Personal Access Token** and give an **ID** (e.g., github-credentials).
+    
+
+###  Configure SCM in Job
+
+*   Job → Source Code Management → Git
+    
+*   Repo URL: https://github.com/user/repo.git
+    
+*   Credentials: select github-credentials
+    
+*   Branch: main (or relevant branch)
+    
+
+###  Build Step
+
+*   Build → Add build step → Invoke top-level Maven targets
+    
+*   **Goals:** test
+    
+*   **Options:** -Dcucumber.options="--tags @AddPlace"
 
 This approach keeps my payloads reusable and readable.
 
